@@ -62,4 +62,29 @@ public class matrix_functions
 		
 		return arr;
 	}
+	
+	// Makes a smaller matrix - smaller by 1 unit
+	private matrix_functions subMatrix(int r, int c)
+	{
+		matrix_functions subMatrixA = new matrix_functions(size - 1);
+		
+		int row = 0;
+		for(int i = 0; i < size; i++)
+		{
+			if(i == r) continue;
+			
+			int col = 0;
+			for(int j = 0; j < size; j++)
+			{
+				if(j == c) continue;
+				
+				subMatrixA.matrixA[row][col] = matrixA[i][j];
+				col++;
+			}
+			
+			row++;
+		}
+		
+		return subMatrixA;
+	}
 }
