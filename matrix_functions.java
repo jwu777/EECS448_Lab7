@@ -87,4 +87,15 @@ public class matrix_functions
 		
 		return subMatrixA;
 	}
+	
+	
+  /**
+	Getter and setter methods
+  **/
+
+	// Sets matrix row
+	public void setRow(int row, String row_vals) //accepts a row number followed by an array of values
+	{
+		matrixA[row] = stringToDoubleArray(row_vals);
+	}
 }
