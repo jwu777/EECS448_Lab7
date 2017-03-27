@@ -108,5 +108,29 @@ public class matrix_functions
 /**
  	Matrix public methods
 **/
+	public double findDeterminant()
+	{
+		double determinantVal = 0.0;
+		
+		// Base case for 1x1 matrix
+		if (size == 1)
+		{
+			determinantVal = matrixA[0][0];
+		}
+		else if(size == 2) // Base case for 2x2 matrix
+		{
+			determinantVal = matrixA[0][0] * matrixA[1][1] - matrixA[0][1] * matrixA[1][0];
+		}
+		else
+		{
+			for(int i = 0; i < size; i++)
+			{
+				determinantVal += Math.pow(-1.0, (double)i) * matrixA[0][i] * subMatrix(0, i).findDeterminant();
+			}
+		}
+		
+		return determinantVal;
+	}
+	
 	
 }
