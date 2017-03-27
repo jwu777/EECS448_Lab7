@@ -98,4 +98,15 @@ public class matrix_functions
 	{
 		matrixA[row] = stringToDoubleArray(row_vals);
 	}
+	
+	// Gets matrix row
+	public String getRow(int row)
+	{	
+		return doubleToStringArray(matrixA[row]);
+	}	
+
+/**
+ 	Matrix public methods
+**/
+	
 }
