@@ -22,4 +22,25 @@ public class matrix_functions
 		
 		matrixA = new double[size][size];
 	}
+	
+	/**
+  	Helper Methods
+	**/
+	
+	// Convert double array to String array
+	private String doubleToStringArray(double[] arr)
+	{
+		String temp = new String();
+		
+		for(int i = 0; i < arr.length; i ++)
+		{
+			temp += arr[i];
+			if(i < arr.length -1)
+			{
+				temp += " ";	
+			}
+		}
+		
+		return temp;
+	}	
 }
