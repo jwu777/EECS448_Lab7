@@ -23,9 +23,10 @@ public class matrix_functions
 		matrixA = new double[size][size];
 	}
 	
-	/**
-  	Helper Methods
-	**/
+	 
+  /**
+	Helper methods
+  **/
 	
 	// Convert double array to String array
 	private String doubleToStringArray(double[] arr)
@@ -43,4 +44,22 @@ public class matrix_functions
 		
 		return temp;
 	}	
+	
+	// Convert String array to double array
+	private double[] stringToDoubleArray(String str)
+	{
+		double[] arr = new double[size];
+		
+		// Parse String into integers
+		String[] bits = str.split(" ");
+		
+		int i = 0;
+		
+		for(String bit : bits)
+		{
+			arr[i++] = Double.parseDouble(bit);
+		}
+		
+		return arr;
+	}
 }
