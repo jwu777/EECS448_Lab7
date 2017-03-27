@@ -132,5 +132,21 @@ public class matrix_functions
 		return determinantVal;
 	}
 	
+	public matrix_functions findInverse()
+	{
+		matrix_functions matrixInverted = new matrix_functions(this.size);
+		
+		double determinantVar = findDeterminant();
+		
+		for(int i = 0; i < size; i++)
+		{
+			for(int j = 0; j < size; j++)
+			{
+				matrixInverted.matrixA[i][j] = (Math.pow(-1.0, (double)(i + j)) * subMatrix(j, i).findDeterminant() / determinantVar);
+			}
+		}
+		
+		return matrixInverted;
+	}
 	
 }
